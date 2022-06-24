@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <meta charset="utf-8">
+        <title>圖形驗證碼，登入驗證</title>
+    </head>
+    <body>
+        <form name='myform' action="" method="POST">
+            {% csrf_token %}
+            <h2>已經登入</h2>
+            <input type="button" value="登出" onclick="window.location='/login1/'">
+            <div style="color:chocolate">{{message01}}</div>
+        </form>
+    </body>
+</htm>

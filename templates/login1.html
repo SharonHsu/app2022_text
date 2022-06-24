@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <meta charset="utf-8">
+        <title>圖形驗證碼，登入驗證</title>
+    </head>
+    <body>
+        <form name='myform' action="" method="POST">
+            {% csrf_token %}
+            <table width='80%' border="1">
+                <tr>
+                    <td>輸入帳號</td>
+                    <td>{{postform.username}}</td>
+                </tr>
+                <tr>
+                    <td>輸入密碼</td>
+                    <td>{{postform.password}}</td>
+                </tr>
+                <tr>
+                    <td>圖形驗證</td>
+                    <td>{{postform.captcha}}</td>
+                </tr>
+            </table>
+            <input type="submit" value="登入">
+            <div style="color:chocolate">{{message01}}</div>
+        </form>
+    </body>
+</htm>
